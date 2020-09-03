@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Product Page | Fantech</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <nav class="navbar navbar-js">
+          <div class="nav-header">
+            <a href="#" class="logo"
+              ><img src="img/logo/logo.png" alt="Fantech logo" class="logo-img"
+            /></a>
+            <button class="navbar-toggler navbar-toggler-js"></button>
+          </div>
+
+          <ul class="navigation">
+            <li class="nav-item">
+              <a href="#" class="nav-link mouses">Мыши</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link keyboards">Клавиатуры</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link sound">Звук</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link carpets">Ковры</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link accessories">Аксессуары</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link cooling">Охлаждение</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link other">Другое</a>
+            </li>
+          </ul>
+
+          <button
+            class="open-contacts open-modal-js"
+            data-modal="making-call"
+          ></button>
+
+          <div class="nav-footer">
+            <ul class="nav-footer-links">
+              <li class="nav-item home">
+                <a href="#" class="nav-link">Главная</a>
+              </li>
+              <li class="nav-item about-company">
+                <a href="#" class="nav-link">О компании</a>
+              </li>
+              <li class="nav-item politics">
+                <a href="#" class="nav-link">Политика конф.</a>
+              </li>
+            </ul>
+            <p class="copyright">© 2020 Fantech UA. Все права защищены.</p>
+          </div>
+
+          <button class="cart-btn cart-btn-js d-none">
+            <span class="badge products-quantity">2</span>
+          </button>
+
+          <div class="cart-container cart-container-js">
+            <div class="cart">
+              <div class="cart-card card">
+                <div class="card-header">
+                  <h5 class="title">КОРЗИНА</h5>
+                  <button class="close-cart close-cart-js"></button>
+                </div>
+                <div class="card-body">
+                  <ul class="cart-products-list">
+                    <li class="product product-js">
+                      <div class="product-img">
+                        <img src="img/poroducts/cart/01.png" alt="DAREDEVIL" />
+                      </div>
+                      <div class="product-description" >
+                        <p class="product-name" data-product-name="DAREDEVIL X11">
+                          DAREDEVIL <span class="model">X11</span>
+                        </p>
+                        <p class="product-color" data-product-color="Черный">Черный</p>
+                        <form>
+                          <input
+                            type="number"
+                            class="product-quantity product-quantity-js"
+                            value="1"
+                          />
+                        </form>
+                        <p class="product-price">669 UAH</p>
+                      </div>
+                      <button class="remove-product-btn"></button>
+                    </li>
+                    <li class="product product-js">
+                      <div class="product-img">
+                        <img src="img/poroducts/cart/02.png" alt="TITAN" />
+                      </div>
+                      <div class="product-description">
+                        <p class="product-name" data-product-name="TITAN X4s">
+                          TITAN <span class="model">X4s</span>
+                        </p>
+                        <p class="product-color" data-product-color="Черный">Черный</p>
+                        <form>
+                          <input
+                            type="number"
+                            pattern="[0-9]*"
+                            class="product-quantity product-quantity-js"
+                            value="1"
+                          />
+                        </form>
+                        <p class="product-price">669 UAH</p>
+                      </div>
+                      <button class="remove-product-btn"></button>
+                    </li>
+                  </ul>
+                  <div class="total-price-container">
+                    <p class="title">ВСЕГО:</p>
+                    <p class="price total-price-js">1338 UAH</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-red checkout-btn checkout-btn-js">
+                    Оформить заказ
+                  </button>
+                </div>
+              </div>
+              <div class="contact-card contact-card-js card">
+                <div class="card-header">
+                  <button class="back-to-cart back-to-cart-js"></button>
+                  <h5 class="title">Оформление заказа</h5>
+                </div>
+                <div class="card-body">
+                  <form class="making-call-form checkout-form-js" action="php/telegram.php">
+                    <input
+                      type="text"
+                      placeholder="ФИО"
+                      name="user-name"
+                      class="user-name form-control"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Телефон"
+                      name="user-phone"
+                      class="user-phone form-control phone"
+                    />
+                    <button class="btn btn-grey submit-form">
+                      Подтвердить
+                    </button>
+
+                    <div class="form-feedback"></div>
+                  </form>
+
+                  <div class="thanks thanks-js">
+                    <h5>Спасибо за Ваш заказ!</h5>
+                    <p>Мы свяжемся с Вами в ближайшее время и уточним детали!</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="product-page-container container">
+      <main id="main">
+        <section class="about-page-section">
+          <ul class="bread-crumbs">
+            <li><a href="#" class="link">Главная</a></li>
+            <li><a href="#" class="link">ИГРОВЫЕ МЫШИ</a></li>
+            <li><a href="#" class="link">DAREDEVIL X11</a></li>
+          </ul>
+        </section>
+        <section class="product-preview-section">
+          <div class="previev-product owl-carousel owl-theme">
+            <div class="item">
+              <img
+                src="img/poroducts/product-page/01.png"
+                alt="DAREDEVIL X11"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="img/poroducts/product-page/01.png"
+                alt="DAREDEVIL X11"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="img/poroducts/product-page/01.png"
+                alt="DAREDEVIL X11"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="img/poroducts/product-page/01.png"
+                alt="DAREDEVIL X11"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="img/poroducts/product-page/01.png"
+                alt="DAREDEVIL X11"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="img/poroducts/product-page/01.png"
+                alt="DAREDEVIL X11"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="about-product-section">
+          <div class="basic-information-product">
+            <h1 class="product-name">
+              DAREDEVIL <span class="grey-text product-model">X11</span>
+            </h1>
+            <p class="product-price">
+              699 <span class="currency">UAH</span>
+              <span class="last-price"
+                >799 <span class="currency">UAH</span></span
+              >
+            </p>
+            <ul class="product-specifications-list">
+              <li>PixArt 3325 Gaming Sensor</li>
+              <li>Ускорение до 100 IPS / 20G</li>
+              <li>Регулируемый «На лету» DPI 200-8000 DPI</li>
+              <li>Частота опроса 1000 Гц</li>
+              <li>Huano 20 Миллионов кликов</li>
+              <li>RGB 16,8 Миллионов настраиваемых параметров цвета</li>
+              <li>Восемь независимо программируемых кнопок</li>
+            </ul>
+          </div>
+          <div class="product-trade-container">
+            <form class="product-trade-form product-trade-js">
+              <select name="product-color" class="product-color form-control">
+                <option value="black">Черный</option>
+                <option value="red">Красный</option>
+                <option value="blue">Синий</option>
+              </select>
+              <button class="buy-product btn btn-red">В корзину</button>
+            </form>
+          </div>
+          <div class="full-information-product">
+            <div class="description-product">
+              <h3 class="title">ОПИСАНИЕ</h3>
+              <p class="description">
+                Игровая мышь Fantech Daredevil X11 является одной из самых
+                интересных новинок компании Fantech. Мало того, что она имеет
+                весьма характерное название – «Сорвиголова», так еще и обладает
+                отличной технической начинкой и очень примечательным дизайном.
+                Вначале предлагаем вам обратить свое внимание на внешний вид
+                корпуса. Он выполнен в характерном агрессивном игровом стиле.
+                Футуристические черные элементы аккуратно сочетаются с яркими
+                красными вставками, что делает мышку очень заметной и
+                привлекательной внешне. Дополняет внешний вид корпуса
+                специальная RGB подсветка, которая включает в себя порядка 16,8
+                миллионов цветов. Яркость и цвет подсветки можно регулировать с
+                помощью специализированного ПО.
+                <br /><br /><span class="separator"></span>
+                Теперь же перейдем к техническим характеристикам, которые
+                способны удивить даже опытного геймера. Инженеры компании
+                установили в игровую мышь Fantech Daredevil X11 оптический
+                сенсор с чувствительностью до 8000 dpi. Заметим, что это в два
+                раза больше, чем у стандартных моделей от других производителей.
+                Общее количество активных функциональных кнопок составляет 8
+                штук, включая колесико. В качестве источника для подключения
+                используется защищенный эластичный USB кабель. Его длинна
+                достигает 1,8 метров. Купить геймерскую мышь Daredevil можно
+                очень легко, оформив заказ на нашем сайте.
+              </p>
+            </div>
+            <div class="product-specifications">
+              <h3 class="title">ХАРАКТЕРИСТИКИ</h3>
+              <ul class="product-specifications-list">
+                <li>
+                  <span class="name">Интерфейс</span>
+                  <ul class="specifications">
+                    <li>USB</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Тип датчика</span>
+                  <ul class="specifications">
+                    <li>Оптический</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Датчик</span>
+                  <ul class="specifications">
+                    <li>Avago 3325</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Разрешение</span>
+                  <ul class="specifications">
+                    <li>От 250 до 8000 DPI</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Максимальная скорость</span>
+                  <ul class="specifications">
+                    <li>100 IPS</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Максимальное ускорение</span>
+                  <ul class="specifications">
+                    <li>20 G</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Скорость опроса</span>
+                  <ul class="specifications">
+                    <li>1000 Гц</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Переключатели</span>
+                  <ul class="specifications">
+                    <li>
+                      Huano <br />
+                      Цикл износостойкости <br />
+                      20 млн. нажатий
+                    </li>
+                  </ul>
+                </li>
+                <li class="separator-margin">
+                  <span class="name">Доп. особ.</span>
+                  <ul class="specifications line-height-pixel-perfect">
+                    <li>8 программируемых кнопок</li>
+                    <li>Встроенная память</li>
+                    <li>
+                      Износостойкие <br />
+                      тефлоновые ножки
+                    </li>
+                    <li>
+                      Материал колеса прокрутки: <br />
+                      силикон + резина Нейлоновый кабель <br />
+                      с ферритовым фильтром
+                    </li>
+                    <li>
+                      Эргономичный дизайн <br />
+                      для правой руки
+                    </li>
+                  </ul>
+                </li>
+                <li class="margin-pixel-perfect-1">
+                  <span class="name">ТИП ХВАТА</span>
+                  <ul class="specifications">
+                    <li>Ладонью</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Подсветка</span>
+                  <ul class="specifications">
+                    <li>RGB (16.8 млн цветов)</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Программное обеспечение</span>
+                  <ul class="specifications">
+                    <li>Есть</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Количество кнопок</span>
+                  <ul class="specifications">
+                    <li>8</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Совместимость с ОС</span>
+                  <ul class="specifications">
+                    <li>Microsoft Windows</li>
+                    <li>Mac OS</li>
+                    <li>Linux</li>
+                    <li>Chrome OS</li>
+                  </ul>
+                </li>
+                <li class="margin-pixel-perfect-2">
+                  <span class="name">Цвет</span>
+                  <ul class="specifications">
+                    <li>Черный</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Комплектация</span>
+                  <ul class="specifications">
+                    <li>Мышь</li>
+                    <li>Инструкция</li>
+                    <li>Гарантийный талон</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Длина кабеля</span>
+                  <ul class="specifications">
+                    <li>1.8 м</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Размер</span>
+                  <ul class="specifications">
+                    <li>130 x 75 x 42 мм</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Размер упаковки</span>
+                  <ul class="specifications">
+                    <li>13.8 х 19.2 х 5.5 см</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Вес брутто</span>
+                  <ul class="specifications">
+                    <li>0.3 кг</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">Страна-производитель</span>
+                  <ul class="specifications">
+                    <li>Китай</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="name">ГАРАНТИЯ</span>
+                  <ul class="specifications">
+                    <li>6 месяцев</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="download-driver">
+              <a href="#" class="download-driver-btn btn btn-red-outline"
+                >Скачать драйвер</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer id="footer">
+      <div class="container footer-content">
+        <div class="footer-left-part">
+          <ul class="navigation">
+            <li class="nav-item"><a href="#" class="nav-link">Главная</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">О компании</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right-part">
+          <ul class="navigation">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Политика конфиденциальности</a>
+            </li>
+          </ul>
+          <p class="copyright">© 2020 Fantech UA. Все права защищены.</p>
+          <a href="#" class="scroll-to-top scroll-to-top-js"></a>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal-container modal-container-js making-call-modal"
+      id="making-call"
+    >
+      <div class="modal">
+        <div class="modal-header">
+          <h5 class="modal-title">Оформление звонка</h5>
+
+          <button class="modal-close-icon close-modal-js"></button>
+        </div>
+        <div class="modal-body">
+          <form
+            action="php/telegram.php"
+            class="making-call-form making-call-form-js"
+          >
+            <input
+              type="text"
+              placeholder="ФИО"
+              name="user-name"
+              class="user-name form-control"
+            />
+            <input
+              type="text"
+              placeholder="Телефон"
+              name="user-phone"
+              class="user-phone form-control phone"
+            />
+            <button class="btn btn-grey submit-form">Перезвоните мне</button>
+
+            <div class="form-feedback"></div>
+          </form>
+        </div>
+        <div class="thanks thanks-js">
+          <h5>Спасибо за Ваше обращение!</h5>
+          <p>Мы свяжемся с Вами в ближайшее время и уточним детали заказа!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/pages/product-page.js"></script>
+  </body>
+</html>

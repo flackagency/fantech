@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body>
+    <!-- Классы в header - mouses, sound... для perfect pixel т.к. дизайнер сделал разные паддинги у пунктов меню.  Классы можно убирать, ничего не поедет -->
+
+    <header id="header">
+      <div class="container">
+        <nav class="navbar navbar-js">
+          <div class="nav-header">
+            <a href="#" class="logo"
+              ><img src="img/logo/logo.png" alt="Fantech logo" class="logo-img"
+            /></a>
+            <button class="navbar-toggler navbar-toggler-js"></button>
+          </div>
+
+          <ul class="navigation">
+            <li class="nav-item">
+              <a href="#" class="nav-link mouses">Мыши</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link keyboards">Клавиатуры</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link sound">Звук</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link carpets">Ковры</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link accessories">Аксессуары</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link cooling">Охлаждение</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link other">Другое</a>
+            </li>
+          </ul>
+          <div class="nav-footer">
+            <ul class="nav-footer-links">
+              <li class="nav-item home">
+                <a href="#" class="nav-link">Главная</a>
+              </li>
+              <li class="nav-item about-company">
+                <a href="#" class="nav-link">О компании</a>
+              </li>
+              <li class="nav-item politics">
+                <a href="#" class="nav-link">Политика конф.</a>
+              </li>
+            </ul>
+            <p class="copyright">© 2020 Fantech UA. Все права защищены.</p>
+          </div>
+
+          <button
+            class="open-contacts open-modal-js d-none"
+            data-modal="making-call"
+          ></button>
+
+          <button class="cart-btn cart-btn-js">
+            <span class="badge products-quantity">2</span>
+          </button>
+
+          <div class="cart-container cart-container-js">
+            <div class="cart">
+              <div class="cart-card card">
+                <div class="card-header">
+                  <h5 class="title">КОРЗИНА</h5>
+                  <button class="close-cart close-cart-js"></button>
+                </div>
+                <div class="card-body">
+                  <ul class="cart-products-list">
+                    <li class="product product-js">
+                      <div class="product-img">
+                        <img src="img/poroducts/cart/01.png" alt="DAREDEVIL" />
+                      </div>
+                      <div class="product-description" >
+                        <p class="product-name" data-product-name="DAREDEVIL X11">
+                          DAREDEVIL <span class="model">X11</span>
+                        </p>
+                        <p class="product-color" data-product-color="Черный">Черный</p>
+                        <form>
+                          <input
+                            type="number"
+                            class="product-quantity product-quantity-js"
+                            value="1"
+                          />
+                        </form>
+                        <p class="product-price">669 UAH</p>
+                      </div>
+                      <button class="remove-product-btn"></button>
+                    </li>
+                    <li class="product product-js">
+                      <div class="product-img">
+                        <img src="img/poroducts/cart/02.png" alt="TITAN" />
+                      </div>
+                      <div class="product-description">
+                        <p class="product-name" data-product-name="TITAN X4s">
+                          TITAN <span class="model">X4s</span>
+                        </p>
+                        <p class="product-color" data-product-color="Черный">Черный</p>
+                        <form>
+                          <input
+                            type="number"
+                            pattern="[0-9]*"
+                            class="product-quantity product-quantity-js"
+                            value="1"
+                          />
+                        </form>
+                        <p class="product-price">669 UAH</p>
+                      </div>
+                      <button class="remove-product-btn"></button>
+                    </li>
+                  </ul>
+                  <div class="total-price-container">
+                    <p class="title">ВСЕГО:</p>
+                    <p class="price total-price-js">1338 UAH</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-red checkout-btn checkout-btn-js">
+                    Оформить заказ
+                  </button>
+                </div>
+              </div>
+              <div class="contact-card contact-card-js card">
+                <div class="card-header">
+                  <button class="back-to-cart back-to-cart-js"></button>
+                  <h5 class="title">Оформление заказа</h5>
+                </div>
+                <div class="card-body">
+                  <form class="making-call-form checkout-form-js" action="php/telegram.php">
+                    <input
+                      type="text"
+                      placeholder="ФИО"
+                      name="user-name"
+                      class="user-name form-control"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Телефон"
+                      name="user-phone"
+                      class="user-phone form-control phone"
+                    />
+                    <button class="btn btn-grey submit-form">
+                      Подтвердить
+                    </button>
+
+                    <div class="form-feedback"></div>
+                  </form>
+
+                  <div class="thanks thanks-js">
+                    <h5>Спасибо за Ваш заказ!</h5>
+                    <p>Мы свяжемся с Вами в ближайшее время и уточним детали!</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="home-page-container">
+      <main id="main" class="container">
+        <section class="products-slider-section">
+          <div class="owl-carousel owl-theme products-slider">
+            <div class="item">
+              <div class="text-part">
+                <p class="product-category">Игровая стерео гарнитура</p>
+                <p class="product-name">
+                  VISAGE II <span class="product-model grey-text">HG17s</span>
+                </p>
+                <p class="product-desription">
+                  Эргономичные, высоко-качественные геймерские наушники
+                </p>
+                <a href="#" class="more-details btn btn-red">Подробнее</a>
+              </div>
+              <div
+                style="
+                  background-image: url('img/poroducts/index-page/HG17s-crop.png');
+                "
+                class="illustration"
+              ></div>
+            </div>
+            <div class="item">
+              <div class="text-part">
+                <p class="product-category">Игровая стерео гарнитура</p>
+                <p class="product-name">
+                  VISAGE II <span class="product-model grey-text">HG17s</span>
+                </p>
+                <p class="product-desription">
+                  Эргономичные, высоко-качественные геймерские наушники
+                </p>
+                <a href="#" class="more-details btn btn-red">Подробнее</a>
+              </div>
+              <div
+                style="
+                  background-image: url('img/poroducts/index-page/HG17s-crop.png');
+                "
+                class="illustration"
+              ></div>
+            </div>
+            <div class="item">
+              <div class="text-part">
+                <p class="product-category">Игровая стерео гарнитура</p>
+                <p class="product-name">
+                  VISAGE II <span class="product-model grey-text">HG17s</span>
+                </p>
+                <p class="product-desription">
+                  Эргономичные, высоко-качественные геймерские наушники
+                </p>
+                <a href="#" class="more-details btn btn-red">Подробнее</a>
+              </div>
+              <div
+                style="
+                  background-image: url('img/poroducts/index-page/HG17s-crop.png');
+                "
+                class="illustration"
+              ></div>
+            </div>
+            <div class="item">
+              <div class="text-part">
+                <p class="product-category">Игровая стерео гарнитура</p>
+                <p class="product-name">
+                  VISAGE II <span class="product-model grey-text">HG17s</span>
+                </p>
+                <p class="product-desription">
+                  Эргономичные, высоко-качественные геймерские наушники
+                </p>
+                <a href="#" class="more-details btn btn-red">Подробнее</a>
+              </div>
+              <div
+                style="
+                  background-image: url('img/poroducts/index-page/HG17s-crop.png');
+                "
+                class="illustration"
+              ></div>
+            </div>
+          </div>
+        </section>
+        <section class="recommended-products-section">
+          <ul class="recommended-products-list">
+            <li
+              class="product-card card-long photo-crop content-right keyboard"
+            >
+              <a href="#" class="product-link"></a>
+              <div class="product-description">
+                <p class="product-category">ИГРОВАЯ КЛАВИАТУРА</p>
+                <p class="product-name">
+                  <span class="model">K511</span
+                  ><span class="brand">HUNTER PRO</span>
+                </p>
+              </div>
+              <div class="product-photo">
+                <img
+                  src="img/poroducts/index-page/hunterPro.png"
+                  alt="HUNTER PRO K511"
+                />
+              </div>
+            </li>
+
+            <!-- Класс .mouse-card нужен для pixel pefect т.к. дизайнер вставил для моб и десктоп версий разные изображения. Класс можно убирать, ничего не поедет-->
+            <li class="product-card card-small content-left mouse-card">
+              <a href="#" class="product-link"></a>
+              <div class="product-description">
+                <p class="product-category">ИГРОВАЯ МЫШЬ</p>
+                <p class="product-name">
+                  <span class="model">X11</span
+                  ><span class="brand">DAREDEVIL</span>
+                </p>
+              </div>
+              <div class="product-photo">
+                <img
+                  src="img/poroducts/index-page/daredevil.png"
+                  alt="DAREDEVIL X11"
+                />
+              </div>
+            </li>
+            <li class="product-card card-smaller content-right">
+              <a href="#" class="product-link"></a>
+              <div class="product-description">
+                <p class="product-category">СИСТЕМА ОХЛАЖДЕНИЯ</p>
+                <p class="product-name">
+                  <span class="model">FC124</span
+                  ><span class="brand">TURBINE</span>
+                </p>
+              </div>
+              <div class="product-photo">
+                <img
+                  src="img/poroducts/index-page/turbine.png"
+                  alt="TURBINE FC124"
+                />
+              </div>
+            </li>
+            <li class="product-card card-smaller content-left">
+              <a href="#" class="product-link"></a>
+              <div class="product-description">
+                <p class="product-category">Игровое КРЕСЛО</p>
+                <p class="product-name">
+                  <span class="model">GC181</span
+                  ><span class="brand">ALPHA</span>
+                </p>
+              </div>
+              <div class="product-photo">
+                <img
+                  src="img/poroducts/index-page/ALPHA.png"
+                  alt="ALPHA GC181"
+                />
+              </div>
+            </li>
+            <li class="product-card card-smaller content-left">
+              <a href="#" class="product-link"></a>
+              <div class="product-description">
+                <p class="product-category">КоВРИК ДЛЯ МЫШИ</p>
+                <p class="product-name">
+                  <span class="model">MPR350</span
+                  ><span class="brand">FIREFLY</span>
+                </p>
+              </div>
+              <div class="product-photo reverse">
+                <img
+                  src="img/poroducts/index-page/freifly.png"
+                  alt="FIREFLY MPR350"
+                />
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="other-section">
+          <div class="content-container">
+            <div class="text-part">
+              <h5 class="title">ДРУГОЕ</h5>
+              <p class="description">
+                Шнуры, зарядки, чехлы, павербанки и другое
+              </p>
+              <a href="#" class="btn btn-white more-details">Подробнее</a>
+            </div>
+            <div class="illustrarion"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer id="footer">
+      <div class="container footer-content">
+        <div class="footer-left-part">
+          <ul class="navigation">
+            <li class="nav-item"><a href="#" class="nav-link">Главная</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">О компании</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right-part">
+          <ul class="navigation">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Политика конфиденциальности</a>
+            </li>
+          </ul>
+          <p class="copyright">© 2020 Fantech UA. Все права защищены.</p>
+          <a href="#" class="scroll-to-top scroll-to-top-js"></a>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal-container modal-container-js making-call-modal"
+      id="making-call"
+    >
+      <div class="modal">
+        <div class="modal-header">
+          <h5 class="modal-title">Оформление звонка</h5>
+
+          <button class="modal-close-icon close-modal-js"></button>
+        </div>
+        <div class="modal-body">
+          <form class="making-call-form making-call-form-js">
+            <input
+              type="text"
+              placeholder="ФИО"
+              name="user-name"
+              class="user-name form-control"
+            />
+            <input
+              type="text"
+              placeholder="Телефон"
+              name="user-phone"
+              class="user-phone form-control phone"
+            />
+            <button class="btn btn-grey submit-form">Перезвоните мне</button>
+
+            <div class="form-feedback"></div>
+          </form>
+        </div>
+        <div class="thanks thanks-js">
+          <h5>Спасибо за Ваше обращение!</h5>
+          <p>Мы свяжемся с Вами в ближайшее время и уточним детали заказа!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="pixel-perfect-container">
+      <button class="pixel-perfect-btn pixel-perfect-btn-js">P|P</button>
+      <div class="pixel-perfect">
+        <img src="img/pagesScreeens/Index-mob.png" alt="pixel-perfect-layout" />
+      </div>
+    </div> -->
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/pages/home-page.js"></script>
+  </body>
+</html>
